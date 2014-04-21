@@ -5,7 +5,7 @@
 
 public class SingleNumber {
 	public int findSingle (int[] A) {
-		for (int i = 0; i < A.length; i++) {
+		for (int i = 1; i < A.length; i++) {
 			A[i] ^= A[i-1];
 		}
 		return A[A.length];

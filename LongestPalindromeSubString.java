@@ -1,3 +1,4 @@
+package LeetCode;
 
 public class LongestPalindromeSubString {
 	public static void main (String[] args) {

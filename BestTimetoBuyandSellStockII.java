@@ -9,32 +9,16 @@ public class BestTimetoBuyandSellStockII {
 		System.out.println(test.maxProfit(prices));
 	}
 	 public int maxProfit(int[] prices) {
-	        int profit = 0;
-	        int newPro;
-	        int num = prices.length;
-	        for (int i = 0; i < num - 1; i++) {
-	        	int[] newInt = Arrays.copyOfRange(prices, i + 1, num);
-	        	Arrays.sort(newInt);
-	        	
-	        	newPro = newInt[newInt.length - 1] - prices[i];
-	        	if (profit <= newPro) {
-	        		profit = newPro;
-	        	}
-	        }
-	        return profit;
-	       
-	 }
-	 public int maxProfit1(int[] prices) {
 		 int profit = 0;
 		 int curPro;
-		 for (int i = 0; i < prices.length; i++) {
-			 for (int j = i + 1; j < prices.length; j++) {
-				 curPro = prices[j] - prices[i];
-				 if (curPro >= profit) {
-					 profit = curPro;
-				 }
+		 for (int i = 1; i < prices.length; i++) {
+			 curPro = prices[i] - prices[i - 1];
+			 if (curPro >= 0) {
+				 profit += curPro;
 			 }
 		 }
 		 return profit;
+	       
 	 }
+
 }

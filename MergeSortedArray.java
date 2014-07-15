@@ -13,7 +13,6 @@ public class MergeSortedArray {
 	}
 	
 	public void merge(int A[], int m, int B[], int n) {
-	    int num = m + n;
 	    int k = m + n - 1;
 	    
 	    while (k >= 0) {

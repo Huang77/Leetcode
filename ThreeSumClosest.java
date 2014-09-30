@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ThreeSumClosest {
 	public static void main (String[] args) {
-		int[] num = {-1,1,1,0};
+		int[] num = {-1,1,1,0,11,1,1,1};
 		int target = 1;
 		System.out.println(threeSumClosest(num, target));
 	}
@@ -36,6 +36,7 @@ public class ThreeSumClosest {
 					end--;
 				}
 			}
+			while(num[i + 1] == num[i]) i++;
 		}
 		return result;
     }
